@@ -11,7 +11,7 @@ MONGODB_HOST = 'localhost'
 MONGODB_PORT = 27017
 DBS_NAME = 'donorschoose'
 COLLECTION_NAME = 'projects'
-FIELDS = {'school_state': True, 'resource_type': True, 'poverty_level': True, 'date_posted': True, 'total_donations': True, '_id': False}
+FIELDS = {'school_state': True, 'resource_type': True, 'funding_status': True, 'date_posted': True, 'total_donations': True, '_id': False}
 
 
 @app.route("/")
@@ -26,9 +26,16 @@ def donorschoose_projects():
     projects = collection.find(projection=FIELDS, limit=100000)
     #projects = collection.find(projection=FIELDS)
     json_projects = []
+    i = 0
     for project in projects:
+        i += 1
+        if (i > 3000):
+            break
         json_projects.append(project)
+        print(project)
+        print(" ")
     json_projects = json.dumps(json_projects, default=json_util.default)
+    
     connection.close()
     return json_projects
 
