@@ -12,7 +12,7 @@ MONGODB_HOST = 'localhost'
 MONGODB_PORT = 27017
 #DBS_NAME = 'donorschoosee'
 #COLLECTION_NAME = 'projects'
-DBS_NAME = 'ttest'
+DBS_NAME = 'tttest'
 COLLECTION_NAME = 'projects'
 
 FIELDS = {'school_state': True, 'resource_type': True, 'funding_status': True, 'date_posted': True, 'total_donations': True}#, '_id': False}
@@ -32,7 +32,7 @@ def lda():
 def donorschoose_projects():
     #connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     #collection = connection[DBS_NAME][COLLECTION_NAME]
-    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/ttest?retryWrites=true")
+    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
     collection = connection[DBS_NAME][COLLECTION_NAME]
 
     projects = collection.find(projection=FIELDS, limit=10000)
