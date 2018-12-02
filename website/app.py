@@ -12,8 +12,17 @@ MONGODB_HOST = 'localhost'
 MONGODB_PORT = 27017
 #DBS_NAME = 'donorschoosee'
 #COLLECTION_NAME = 'projects'
-DBS_NAME = 'tttest'
-COLLECTION_NAME = 'projects'
+DBS_NAME = 'twitterdb'
+COLLECTION_NAME = 'AirPods'
+
+DBS_NAME_TWO = 'twitterdb'
+COLLECTION_NAME_TWO = 'iPhone'
+
+DBS_NAME_THREE = 'twitterdb'
+COLLECTION_NAME_THREE = 'iPad'
+
+DBS_NAME_FOUR = 'twitterdb'
+COLLECTION_NAME_FOUR = 'Watch'
 
 FIELDS = {'school_state': True, 'resource_type': True, 'funding_status': True, 'date_posted': True, 'total_donations': True}#, '_id': False}
 
@@ -32,21 +41,50 @@ def lda():
 def donorschoose_projects():
     #connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     #collection = connection[DBS_NAME][COLLECTION_NAME]
+
     connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
     collection = connection[DBS_NAME][COLLECTION_NAME]
 
     projects = collection.find(projection=FIELDS, limit=10000)
     # projects = collection.find(projection=FIELDS)
     json_projects = []
-    # i = 0
     for project in projects:
-        # i += 1
-        # if (i > 10000):
-        #     break
         json_projects.append(project)
+    connection.close()
+
+    ####################  Add for the second database
+    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
+    collection = connection[DBS_NAME_TWO][COLLECTION_NAME_TWO]
+
+    projects = collection.find(projection=FIELDS, limit=10000)
+    for project in projects:
+        json_projects.append(project)
+    connection.close()
+    #####################
+
+    #####################
+    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
+    collection = connection[DBS_NAME_THREE][COLLECTION_NAME_THREE]
+
+    projects = collection.find(projection=FIELDS, limit=10000)
+    for project in projects:
+        json_projects.append(project)
+    connection.close()
+    #######################
+
+    #####################
+    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
+    collection = connection[DBS_NAME_FOUR][COLLECTION_NAME_FOUR]
+
+    projects = collection.find(projection=FIELDS, limit=10000)
+    for project in projects:
+        json_projects.append(project)
+    connection.close()
+    #######################
+
     json_projects = json.dumps(json_projects, default=json_util.default)
     
-    connection.close()
+    
     return json_projects
 
 if __name__ == "__main__":
