@@ -15,6 +15,8 @@ from PIL import Image
 from nltk.corpus import stopwords
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
+from nltk.stem.porter import PorterStemmer
+from wordcloud import ImageColorGenerator
 get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'retina'")
 
 
@@ -31,20 +33,28 @@ def clean_text(text):
     neg_handled = neg_pattern.sub(lambda x: negations_dic[x.group()], stripped)
     tokenizer = RegexpTokenizer(r'\w+')
     tokens = tokenizer.tokenize(neg_handled)
-    stripped = [word for word in tokens if word not in stopwords.words('english')]
+    stemmer = PorterStemmer()
+    stemmed =  [stemmer.stem(word) for word in tokens] # stemming
+    stripped = [word for word in stemmed if word not in stopwords.words('english')]
     return(" ".join(stripped).strip())
 
 
 
-def ProfileWordCloud(df):
-    from wordcloud import ImageColorGenerator
+
+
+
+
+
+
+def get_wordcloud(df):
     profile = df.user.apply(lambda x: x['description'])
-    profile = profile.loc[profile.notnull()]
+    profile = profile.loc[profile.notnull()].reset_index(drop = True)
     profile = profile.apply(lambda x: clean_text(x))
+    profile = profile.loc[profile.notnull()].reset_index(drop = True)
     text = " ".join(text for text in profile)
 
     # Load mask image
-    twitter_mask = np.array(Image.open("./user_portrait.png"))
+    twitter_mask = np.array(Image.open("./TwitterLogo.png"))
 
     # Create a word cloud image
     wordcloud = WordCloud(background_color="white",
@@ -58,6 +68,8 @@ def ProfileWordCloud(df):
     # Show word cloud
     plt.imshow(wordcloud.recolor(color_func=image_colors))
     plt.axis("off")
+    plt.title('User Profile Word Cloud')
     plt.gcf().set_size_inches(18.5, 10.5)
-    plt.savefig('./profile_wordcloud.png', dpi=300)
+    plt.savefig('./UserProfileWordCloud.png', dpi=300)
+    plt.show()
 
