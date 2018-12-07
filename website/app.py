@@ -26,15 +26,62 @@ COLLECTION_NAME_FOUR = 'Watch'
 
 FIELDS = {'school_state': True, 'resource_type': True, 'funding_status': True, 'date_posted': True, 'total_donations': True}#, '_id': False}
 
+json_projectss = []
+
+connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
+collection = connection[DBS_NAME][COLLECTION_NAME]
+
+projects = collection.find(projection=FIELDS, limit=100000)
+# projects = collection.find(projection=FIELDS)
+json_projects = []
+for project in projects:
+    json_projects.append(project)
+connection.close()
+
+####################  Add for the second database
+connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
+collection = connection[DBS_NAME_TWO][COLLECTION_NAME_TWO]
+
+projects = collection.find(projection=FIELDS, limit=100000)
+for project in projects:
+    json_projects.append(project)
+connection.close()
+#####################
+
+#####################
+connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
+collection = connection[DBS_NAME_THREE][COLLECTION_NAME_THREE]
+
+projects = collection.find(projection=FIELDS, limit=100000)
+for project in projects:
+    json_projects.append(project)
+connection.close()
+#######################
+
+#####################
+connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
+collection = connection[DBS_NAME_FOUR][COLLECTION_NAME_FOUR]
+
+projects = collection.find(projection=FIELDS, limit=100000)
+for project in projects:
+    json_projects.append(project)
+connection.close()
+#######################
+
+json_projectss = json.dumps(json_projects, default=json_util.default)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("main.html")
 
 
 @app.route("/lda")
 def lda():
     return render_template("lda.html")
+
+@app.route("/map")
+def map():
+    return render_template("index.html")
 
 
 @app.route("/donorschoose/projects")
@@ -42,50 +89,12 @@ def donorschoose_projects():
     #connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     #collection = connection[DBS_NAME][COLLECTION_NAME]
 
-    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
-    collection = connection[DBS_NAME][COLLECTION_NAME]
+    
 
-    projects = collection.find(projection=FIELDS, limit=10000)
-    # projects = collection.find(projection=FIELDS)
-    json_projects = []
-    for project in projects:
-        json_projects.append(project)
-    connection.close()
-
-    ####################  Add for the second database
-    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
-    collection = connection[DBS_NAME_TWO][COLLECTION_NAME_TWO]
-
-    projects = collection.find(projection=FIELDS, limit=10000)
-    for project in projects:
-        json_projects.append(project)
-    connection.close()
-    #####################
-
-    #####################
-    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
-    collection = connection[DBS_NAME_THREE][COLLECTION_NAME_THREE]
-
-    projects = collection.find(projection=FIELDS, limit=10000)
-    for project in projects:
-        json_projects.append(project)
-    connection.close()
-    #######################
-
-    #####################
-    connection = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
-    collection = connection[DBS_NAME_FOUR][COLLECTION_NAME_FOUR]
-
-    projects = collection.find(projection=FIELDS, limit=10000)
-    for project in projects:
-        json_projects.append(project)
-    connection.close()
-    #######################
-
-    json_projects = json.dumps(json_projects, default=json_util.default)
     
     
-    return json_projects
+    
+    return json_projectss
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5000,debug=True)
