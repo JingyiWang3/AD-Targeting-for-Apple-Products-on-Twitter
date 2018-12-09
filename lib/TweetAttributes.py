@@ -1,21 +1,6 @@
 
 # coding: utf-8
 
-# In[3]:
-
-
-# Import data from mongodb
-import pymongo
-from pymongo import MongoClient
-client = pymongo.MongoClient("mongodb+srv://yh2866:Aa123456@cluster0-5mcg4.mongodb.net/tttest?retryWrites=true")
-cursor = client['twitterdb']['AirPods']
-
-# Save to a dataframe
-import pandas as pd
-twitterdf = pd.DataFrame(list(cursor.find()))
-print(twitterdf.shape)
-
-
 # ### Device or Operating System
 
 # In[4]:
@@ -41,7 +26,7 @@ def sourceInfo(rawdata):
     source_mod = source_mod.append(other)
     return source_mod 
 
-sourceInfo(twitterdf)
+#sourceInfo(twitterdf)
 
 
 # ### Tweets Language
@@ -53,5 +38,5 @@ def lang(rawdata):
     lang = rawdata['lang'].value_counts()
     return lang
     
-lang(twitterdf)
+#lang(twitterdf)
 

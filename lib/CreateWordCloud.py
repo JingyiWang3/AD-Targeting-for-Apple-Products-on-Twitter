@@ -40,12 +40,6 @@ def clean_text(text):
 
 
 
-
-
-
-
-
-
 def get_wordcloud(df,name):
     profile = df.user.apply(lambda x: x['description'])
     profile = profile.loc[profile.notnull()].reset_index(drop = True)

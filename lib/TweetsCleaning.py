@@ -37,21 +37,3 @@ def filter_tweets(original_tweets):
             res_tweets.append(original_tweets[i])
             res_tweets_filter.append(f_tweet)
     return res_tweets, res_tweets_filter
-
-
-
-def main():
-    txt = "RT @SocialWebMining rta Mining women https://hrwhisper.me 1M+ Tweets @hrwhisper About #Syria http://wp.me/p3QiJd-1I https:…"
-    print (filter_tweet(txt))
-    txt = "RT @StewySongs: People are people, families are families &amp; lives are lives the world over. The UK is shoulder to shoulder with Paris https:…"
-    print (filter_tweet(txt))
-
-    for i, word in enumerate(english_stopwords):
-        if word not in stopwords:
-            print (word)
-
-    print (wnl.lemmatize('followed'), wnl.lemmatize('following'))
-
-
-if __name__ == '__main__':
-    main()
