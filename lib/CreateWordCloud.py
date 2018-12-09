@@ -46,7 +46,7 @@ def clean_text(text):
 
 
 
-def get_wordcloud(df):
+def get_wordcloud(df,name):
     profile = df.user.apply(lambda x: x['description'])
     profile = profile.loc[profile.notnull()].reset_index(drop = True)
     profile = profile.apply(lambda x: clean_text(x))
@@ -70,6 +70,6 @@ def get_wordcloud(df):
     plt.axis("off")
     plt.title('User Profile Word Cloud')
     plt.gcf().set_size_inches(18.5, 10.5)
-    #plt.savefig('../output/UserProfileWordCloud.png', dpi=300)
+    plt.savefig('../output/' + str(name) + 'WordCloud.png', dpi=300)
     plt.show()
 

@@ -31,7 +31,7 @@ def get_cleaned_df(df):
 
 
 
-def get_sentiment(df):
+def get_sentiment(df,name):
     
     cleaned = get_cleaned_df(df)
     cleaned['polarity'] = cleaned.apply(lambda x: TextBlob(x['text']).sentiment.polarity, axis=1)
@@ -65,7 +65,7 @@ def get_sentiment(df):
     plt.axis("off")
     plt.gcf().set_size_inches(18.5, 10.5)
 
-    #plt.savefig('../output/SentimentWC.png', dpi=300)
+    plt.savefig('../output/' + str(name) + 'Sentiment.png', dpi=300)
     plt.show()
     
 
