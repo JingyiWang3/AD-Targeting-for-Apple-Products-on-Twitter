@@ -35,7 +35,7 @@ import pandas as pd
 #from collections import OrderedDict
 import pyLDAvis.gensim
 
-def lda(data):
+def lda(data, name):
     twitterdf = data.loc[data.lang == 'en',:]
     
     # to tower case + remove stop words
@@ -70,6 +70,6 @@ def lda(data):
 
     pyLDAvis.enable_notebook()
     panel = pyLDAvis.gensim.prepare(lda, corpus_lda, dictionary, mds='tsne')
-    #pyLDAvis.save_html(panel, '../output/LDA-AirPods.html')
+    pyLDAvis.save_html(panel, '../output/' + name + '-LDA.html')
     
     return panel

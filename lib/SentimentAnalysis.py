@@ -65,7 +65,7 @@ def get_sentiment(df,name):
     plt.axis("off")
     plt.gcf().set_size_inches(18.5, 10.5)
 
-    plt.savefig('../output/' + str(name) + 'Sentiment.png', dpi=300)
+    plt.savefig('../output/' + name + 'Sentiment.png', dpi=300)
     plt.show()
     
 
