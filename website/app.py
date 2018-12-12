@@ -79,6 +79,27 @@ def index():
 def lda():
     return render_template("lda.html")
 
+
+@app.route("/test")
+def test():
+    return render_template("iindex.html")
+
+@app.route("/iPhone-LDA")
+def lda_iphone():
+    return render_template("iPhone-LDA.html")
+
+@app.route("/iPad-LDA")
+def lda_ipad():
+    return render_template("iPad-LDA.html")
+
+@app.route("/AirPods-LDA")
+def lda_airpods():
+    return render_template("AirPods-LDA.html")
+
+@app.route("/Watch-LDA")
+def lda_watch():
+    return render_template("Watch-LDA.html")
+
 @app.route("/map")
 def map():
     return render_template("index.html")

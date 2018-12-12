@@ -6,11 +6,41 @@
   <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
   <link rel="stylesheet" href="./static/lib/css/dc.css">
   <link rel="stylesheet" href="./static/css/custom.css">
+  <link href="https://getbootstrap.com/docs/4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/4.1/examples/carousel/carousel.css" rel="stylesheet">
 </head>
 
 <body class="application">
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+<header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">E6893 Big Data Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./map">Map <span class="sr-only">(current)</span></a>
+            </li>
+            <div class="btn-group">
+              <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LDA
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="./iPhone-LDA">iPhone</a>
+                <a class="dropdown-item" href="./iPad-LDA">iPad</a>
+                <a class="dropdown-item" href="./AirPods-LDA">Airpod</a>
+                <a class="dropdown-item" href="./Watch-LDA">Apple Watch</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+<!-- <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="./">E6893 Big Data Project</a>
@@ -19,9 +49,17 @@
       <ul class="nav navbar-nav navbar-left">
         <li><a href="./map">Map</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-left">
-        <li><a href="./lda">LDA</a></li>
-      </ul>
+      <div class="btn-group">
+              <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                LDA
+              </button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="./iPhone-LDA">iPhone</a>
+                <a class="dropdown-item" href="./iPad-LDA">iPad</a>
+                <a class="dropdown-item" href="./AirPods-LDA">Airpod</a>
+                <a class="dropdown-item" href="./Watch-LDA">Apple Watch</a>
+              </div>
+            </div>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="https://github.com/yh2866/E6893-Big-Data-Project">GitHub</a></li>
         <li><a href="https://www.youtube.com/watch?v=dmbmz1pz-X8&t=109s">YouTube</a></li>
@@ -29,7 +67,7 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
