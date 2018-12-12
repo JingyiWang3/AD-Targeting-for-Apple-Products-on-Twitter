@@ -39,6 +39,9 @@ def clean_text(text):
     return(" ".join(stripped).strip())
 
 
+stopwords_lst  = ['love','ig','sc','apple','like', 'snap', 'snapchat', 'make', 'insta', 'life', 'follow', 'tweet',
+                 'go', 'want', 'live', 'take', 'one', 'know', 'thing', 'instagram']
+
 
 def get_wordcloud(df,name):
     profile = df.user.apply(lambda x: x['description'])
@@ -54,7 +57,8 @@ def get_wordcloud(df,name):
     wordcloud = WordCloud(background_color="white",
                           font_path = 'CabinSketch-Bold.ttf',
                           max_words=400, 
-                          mask= twitter_mask
+                          mask= twitter_mask,
+                          stopwords= stopwords_lst
                          ).generate(text)
     
     image_colors = ImageColorGenerator(twitter_mask)
@@ -63,7 +67,7 @@ def get_wordcloud(df,name):
     plt.imshow(wordcloud.recolor(color_func=image_colors))
     plt.axis("off")
     plt.title('User Profile Word Cloud')
-    plt.gcf().set_size_inches(18.5, 10.5)
+    plt.gcf().set_size_inches(10.5, 10.5)
     plt.savefig('../output/' + name + 'WordCloud.png', dpi=300)
     plt.show()
 

@@ -4,6 +4,7 @@
 # ### Device or Operating System
 
 # In[4]:
+import pandas as pd
 
 
 def sourceInfo(rawdata):

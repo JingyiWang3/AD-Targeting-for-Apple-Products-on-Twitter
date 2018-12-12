@@ -63,7 +63,7 @@ def get_sentiment(df,name):
     # Show word cloud
     plt.imshow(wordcloud.recolor(color_func=color_func))
     plt.axis("off")
-    plt.gcf().set_size_inches(18.5, 10.5)
+    plt.gcf().set_size_inches(10.5, 10.5)
 
     plt.savefig('../output/' + name + 'Sentiment.png', dpi=300)
     plt.show()
