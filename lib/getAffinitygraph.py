@@ -41,8 +41,8 @@ def get_entities(retweetNum,retweet,influenceDF):
             tweet = retweet.text.iloc[i]
             G.add_node(amount,color = "lightblue")# blue or green
             dictionary = influenceDF.loc[influenceDF['text'].str.match(tweet),'entities'].any()
-            weight = int(retweet.retweet_count.iloc[i])
-            mydict['nodes'].append({"id":amount,"group":1,"weight":weight}) 
+            #weight = int(retweet.retweet_count.iloc[i])
+            mydict['nodes'].append({"id":amount,"group":1}) 
             
 
             for (key, value) in dictionary.items():
