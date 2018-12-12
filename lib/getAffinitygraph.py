@@ -35,21 +35,21 @@ def get_entities(retweetNum,retweet,influenceDF):
     G = nx.Graph()
     mydict = {'nodes':[],'links':[]}
     for i in range(nrow):
-        amount = retweet.retweet_count.iloc[i]
+        amount = int(retweet.retweet_count.iloc[i])
         temp = []
         try:
             tweet = retweet.text.iloc[i]
             G.add_node(amount,color = "lightblue")# blue or green
             dictionary = influenceDF.loc[influenceDF['text'].str.match(tweet),'entities'].any()
-            weight = retweet.retweet_count.iloc[i]
-            mydict['nodes'].append({"id":tweet,"group":1,"weight":weight}) 
+            weight = int(retweet.retweet_count.iloc[i])
+            mydict['nodes'].append({"id":amount,"group":1,"weight":weight}) 
             
 
             for (key, value) in dictionary.items():
                 if value !=[]:
                     if key in ['media','urls','symbols']:  # url
                         [mydict['nodes'].append({"id":i['url'],"group":2}) for i in value]
-                        [mydict['links'].append({'source':tweet,'target':i['url'],'value':1}) for i in value]   
+                        [mydict['links'].append({'source':amount,'target':i['url'],'value':1}) for i in value]   
                         temp.append([i['url'] for i in value])
                         [G.add_node(i['url'],color = "red") for i in value]
                         [G.add_edge(amount,j['url']) for j in value]
@@ -59,14 +59,14 @@ def get_entities(retweetNum,retweet,influenceDF):
                     
                     elif key in ['hashtags']:  # yellow
                         [mydict['nodes'].append({"id":'#' + i['text'] ,"group":3}) for i in value]
-                        [mydict['links'].append({'source':tweet,'target':'#'+i['text'],'value':1}) for i in value]   
+                        [mydict['links'].append({'source':amount,'target':'#'+i['text'],'value':1}) for i in value]   
                         temp.append(['#'+i['text'] for i in value])
                         [G.add_node('#'+i['text'],color = "yellow") for i in value]
                         [G.add_edge(amount,'#'+j['text']) for j in value]
                     
                     elif key in ['user_mentions']: # orange
                         [mydict['nodes'].append({"id":'@'+i['screen_name'],"group":4}) for i in value]
-                        [mydict['links'].append({'source':tweet,'target':'@'+i['screen_name'],'value':1}) for i in value]
+                        [mydict['links'].append({'source':amount,'target':'@'+i['screen_name'],'value':1}) for i in value]
                         temp.append(['@'+i['screen_name'] for i in value])
                         [G.add_node('@'+i['screen_name'],color = "orange") for i in value]
         
