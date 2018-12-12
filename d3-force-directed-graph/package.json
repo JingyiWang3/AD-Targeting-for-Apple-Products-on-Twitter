@@ -1,0 +1,9 @@
+{
+  "name": "d3-force-directed-graph",
+  "main": "d3-force-directed-graph.js",
+  "version": "124.0.0",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "https://beta.observablehq.com/@mbostock"
+  }
+}
