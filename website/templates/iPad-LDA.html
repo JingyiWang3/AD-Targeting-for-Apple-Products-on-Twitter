@@ -18,6 +18,26 @@
   
 </head>
 
+
+<style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      </style>
+
   <body>
 
     <header>
@@ -49,10 +69,10 @@
             </div>
 
                   <li class="nav-item active">
-                    <a class="nav-link " href="./">  | &nbsp Influencer </a>
+                    <a class="nav-link " href="http://35.196.85.28:8000">  | &nbsp Influencer </a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="http://35.196.85.28:5000/ads">| &nbsp Ads</a>
+                    <a class="nav-link" href="https://nbviewer.jupyter.org/github/yh2866/Documents/blob/master/Airpods.jpg">| &nbsp Ads</a>
                   </li>
                 </ul>
               </div>
@@ -69,6 +89,21 @@
               </ul>
             </nav>
           </header>
+
+
+          <div class="row">
+      <div class="column">
+        <h3 style="text-align: center">  Tweets User Profile </h3>
+        <img src="https://s3.amazonaws.com/bigdata-yh2866/iPadWordCloud.png" style="width:100%">
+      </div>
+      <div class="column">
+        <h3 style="text-align: center">  Tweets Sentiment Analysis </h3>
+        <img src="https://s3.amazonaws.com/bigdata-yh2866/iPadSentiment.png" style="width:100%">
+      </div>
+    </div>
+
+      <br>
+        <br>
 <!-- <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="./">E6893 Big Data Project</a>
