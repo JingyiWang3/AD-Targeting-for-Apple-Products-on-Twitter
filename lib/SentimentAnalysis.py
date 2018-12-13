@@ -45,7 +45,7 @@ def get_sentiment(df,name):
         elif sentiment > 0.00:
                 colors = 'green'
         else:
-                colors = 'yellow'
+                colors = 'grey'
         return colors
 
     # Load mask image
