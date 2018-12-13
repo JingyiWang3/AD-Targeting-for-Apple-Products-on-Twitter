@@ -35,7 +35,7 @@ import pandas as pd
 #from collections import OrderedDict
 import pyLDAvis.gensim
 
-def lda(data, name):
+def lda(data, name, topic):
     twitterdf = data.loc[data.lang == 'en',:]
     
     # to tower case + remove stop words
@@ -61,7 +61,7 @@ def lda(data, name):
     tfidf = models.TfidfModel(corpus) # step 1 -- initialize a model
     corpus_tfidf = tfidf[corpus]  # step 2 -- use the model to transform vectors
 
-    total_topics = 5
+    total_topics = topic
     lda = models.LdaModel(corpus, id2word=dictionary, num_topics=total_topics)
     corpus_lda = lda[corpus_tfidf] # create a double wrapper over the original corpus: bow->tfidf->fold-in-lsi
 
