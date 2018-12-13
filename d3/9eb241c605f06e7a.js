@@ -1,17 +1,18 @@
-// URL: https://beta.observablehq.com/d/42c1cb4b13c95e2c
-// Title: D3 Force-Directed Graph
+// URL: https://beta.observablehq.com/d/9eb241c605f06e7a
+// Title: Disjoint Force-Directed Graph
 // Author: Yuanqing Hong (@yh2866)
-// Version: 126
+// Version: 130
 // Runtime version: 1
 
 const m0 = {
-  id: "42c1cb4b13c95e2c@126",
+  id: "9eb241c605f06e7a@130",
   variables: [
     {
       inputs: ["md"],
       value: (function(md){return(
-md`### D3 Force-Directed Graph
- Here is some description. blalalalalala`
+md`# Disjoint Force-Directed Graph
+
+When using [D3’s force layout](https://github.com/d3/d3-force) with a disjoint graph, you typically want the [positioning forces](https://github.com/d3/d3-force/blob/master/README.md#positioning) (d3.forceX and d3.forceY) instead of the [centering force](https://github.com/d3/d3-force/blob/master/README.md#centering) (d3.forceCenter). The positioning forces, unlike the centering force, prevent detached subgraphs from escaping the viewport.`
 )})
     },
     {
@@ -24,7 +25,7 @@ md`### D3 Force-Directed Graph
   const simulation = forceSimulation(nodes, links).on("tick", ticked);
 
   const svg = d3.select(DOM.svg(width, height))
-      .attr("viewBox", [-width, -height, 2 * width, 2 * height]);
+      .attr("viewBox", [-width / 2, -height / 2, width, height]);
 
   const link = svg.append("g")
       .attr("stroke", "#999")
@@ -64,9 +65,6 @@ md`### D3 Force-Directed Graph
 )
     },
     {
-
-    },
-    {
       name: "forceSimulation",
       inputs: ["d3"],
       value: (function(d3){return(
@@ -74,7 +72,8 @@ function forceSimulation(nodes, links) {
   return d3.forceSimulation(nodes)
       .force("link", d3.forceLink(links).id(d => d.id))
       .force("charge", d3.forceManyBody())
-      .force("center", d3.forceCenter());
+      .force("x", d3.forceX())
+      .force("y", d3.forceY());
 }
 )})
     },
@@ -88,7 +87,7 @@ d3.json("https://raw.githubusercontent.com/fangbingliu/E6893-Big-Data-Project/ma
     {
       name: "height",
       value: (function(){return(
-600
+680
 )})
     },
     {
@@ -142,7 +141,7 @@ require("d3@5")
 };
 
 const notebook = {
-  id: "42c1cb4b13c95e2c@126",
+  id: "9eb241c605f06e7a@130",
   modules: [m0]
 };
 
