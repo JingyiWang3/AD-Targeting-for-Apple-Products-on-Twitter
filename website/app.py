@@ -100,9 +100,14 @@ def lda_airpods():
 def lda_watch():
     return render_template("Watch-LDA.html")
 
+@app.route("/AirPods_ad")
+def ad_airpods():
+    return render_template("AirPods_ad.html")
+
 @app.route("/map")
 def map():
     return render_template("index.html")
+
 
 
 @app.route("/donorschoose/projects")
