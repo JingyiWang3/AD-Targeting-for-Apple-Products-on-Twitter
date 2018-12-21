@@ -52,7 +52,7 @@ md`
     .selectAll("circle")
     .data(nodes)
     .enter().append("circle")
-      .attr("r", d => radiusScale(+(d.weight/20000.0)))
+      .attr("r", d => radiusScale(+(d.weight*400)))
       // .attr("r", 5)
       .attr("fill", color)
       .call(drag(simulation));
@@ -110,7 +110,7 @@ function forceSimulation(nodes, links) {
       name: "data",
       inputs: ["d3"],
       value: (function(d3){return(
-d3.json("https://raw.githubusercontent.com/JingyiWang3/ADA-Final-Project/master/influence_dict.json")
+d3.json("https://raw.githubusercontent.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/master/website/d3/influence_dict2.json")
 )})
     },
     {
