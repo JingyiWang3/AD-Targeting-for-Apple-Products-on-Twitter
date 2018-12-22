@@ -30,5 +30,7 @@ get into "website/s3" folder:
 And then, the website is availble through: '0.0.0.0:5000'
 
 
+#### The website has hosted in the google cloud can be access through: `http://35.196.85.28:5000/`
 
-The diagram of the project is showing below:
+
+#### The diagram of the project:
