@@ -14,6 +14,7 @@
 
 #### The website is hosted on Google Cloud and can be access through: [http://35.196.85.28:5000/](http://35.196.85.28:5000/)
 
+The intermediate ouput of LDA, Sentiment Analysis and Influence Analysis is in ```data_processing/main.ipynb``` 
 
 ## Run Instruction:
 
