@@ -13,13 +13,12 @@ const m0 = {
 md`
 ### Influencer Graph
 
-**Nodes**: Green - Users who created the most retweeted tweets
+**Green Nodes**:  Users mentioned  by other users
+**Purple Nodes**:  Users post some tweets 
+**Orange Nodes**:  Users retweeted by other users
 
-**Entities**: Purple - Important URLs; Orange - Hashtags; Yellow - The user commonly mentioned
-
-**Edges**:  Entities are connected to green nodes if they are menditoned in the  tweets created by this user.
-
-**Nodes size**: proportional to the retweeted count of the tweets the nodes is related to.`
+**Edges**:   Edges are added from node A to node B if user A mentioned user B in his/her tweet or user A retweeted user B’s tweet
+**Nodes size**: proportional to the In-degree of a node
 )})
     },
     {
