@@ -18,7 +18,7 @@ md`
 **Orange Nodes**:  Users retweeted by other users
 
 **Edges**:   Edges are added from node A to node B if user A mentioned user B in his/her tweet or user A retweeted user B’s tweet
-**Nodes size**: proportional to the In-degree of a node
+**Nodes size**: proportional to the In-degree of a node`
 )})
     },
     {
