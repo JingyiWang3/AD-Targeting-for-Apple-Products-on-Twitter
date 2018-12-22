@@ -36,5 +36,8 @@ And then, the website is availble through: '0.0.0.0:5000'
 #### The diagram of the project:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram.png)
 
-#### Main Page of Website:
+#### Main page of website:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/main.png)
+
+#### Page of twitter and geometrical information:
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/geo.png)
