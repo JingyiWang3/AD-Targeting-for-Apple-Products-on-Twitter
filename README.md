@@ -1,4 +1,4 @@
-## AD-Targeting-for-Apple-Products-on-Twitter
+# AD-Targeting-for-Apple-Products-on-Twitter
 
 ### E6893-Big-Data-Project
 
@@ -12,8 +12,10 @@
 |fl2476  |  Fangbing Liu           | fl2476@columbia.edu    |
 |yh2866  |   Yuanqing Hong        |  yh2866@columbia.edu   |
 
+#### The website is hosted on Google Cloud and can be access through: [http://35.196.85.28:5000/](http://35.196.85.28:5000/)
 
-#### Run Instruction:
+
+## Run Instruction:
 
 clone the git repository: 
 
@@ -30,10 +32,10 @@ get into "website/s3" folder:
 And then, the website is availble through: '0.0.0.0:5000'
 
 
-#### The website is hosted in the google cloud can be access through: [http://35.196.85.28:5000/](http://35.196.85.28:5000/)
 
 
-#### The diagram of the project:
+
+## The diagram of the project:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram.png)
 
 #### Main page of website:
@@ -49,4 +51,8 @@ And then, the website is availble through: '0.0.0.0:5000'
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/influ.png)
 
 #### Page of result Ads:
-![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ads.png)
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-banner.png)
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-airpod.png)
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-ipad.png)
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-macbook.png)
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-iphone.png)
