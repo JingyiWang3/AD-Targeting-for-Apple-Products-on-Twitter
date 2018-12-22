@@ -41,3 +41,12 @@ And then, the website is availble through: '0.0.0.0:5000'
 
 #### Page of twitter and geometrical information:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/geo.png)
+
+#### Page of profile and sentimentation analysis:
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/sen.png)
+
+#### Page of influencer analysis:
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/influ.png)
+
+#### Page of result Ads:
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ads.png)
