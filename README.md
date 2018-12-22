@@ -2,19 +2,33 @@
 
 ### E6893-Big-Data-Project
 
-connect with MongoDB Atlas:
+**Team ID: 201812-20**
 
-`python -m pip install pymongo[srv]`
+**Team Members:**
+
+|UNI     |       Name             |           Email        |
+| ------ |  -------------------   |   ---------------------|
+|jw3592  |   Jingyi Wang            | jw3592@columbia.edu |
+|fl2476  |  Fangbing Liu           | fl2476@columbia.edu    |
+|yh2866  |   Yuanqing Hong        |  yh2866@columbia.edu   |
 
 
-import data into MongoDB Atlas (cloud):
+#### Run Instruction:
 
-`mongoimport --host Cluster0-shard-0/cluster0-shard-00-00-5mcg4.mongodb.net:27017,cluster0-shard-00-01-5mcg4.mongodb.net:27017,cluster0-shard-00-02-5mcg4.mongodb.net:27017 --ssl --username yh2866 --password Aa123456 --authenticationDatabase admin --db donorschoose --collection projects --type csv --headerline --file data.csv`
+clone the git repository: 
 
-it must run by:
+`git clone: git@github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter.git`
 
-`python3 app.py `
+get into "website" folder:
 
-import data into mongodb (local):
+`python3 app.py`
 
-`mongoimport -d donorschoose -c projects --type csv --headerline /PATH/TO/DATA/data.csv`
+get into "website/s3" folder:
+
+`python -m SimpleHTTPServer`
+
+And then, the website is availble through: '0.0.0.0:5000'
+
+
+
+The diagram of the project is showing below:
