@@ -1,7 +1,5 @@
 # -*- coding:utf-8 -*-
 
-# Created by hrwhisper on 2016/2/22.
-# twitter text 预处理
 import nltk
 import re
 
