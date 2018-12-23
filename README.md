@@ -1,6 +1,6 @@
 # AD-Targeting-for-Apple-Products-on-Twitter
 
-### E6893-Big-Data-Project
+## E6893-Big-Data-Project
 
 **Team ID: 201812-20**
 
@@ -39,19 +39,19 @@ And then, the website is availble through: '0.0.0.0:5000'
 ## The diagram of the project:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram.png)
 
-#### Main page of website:
+### Main page of website:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/main.png)
 
-#### Page of twitter and geometrical information:
+### Page of twitter and geometrical information:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/geo.png)
 
-#### Page of profile and sentimentation analysis:
+### Page of profile and sentimentation analysis:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/sen.png)
 
-#### Page of influencer analysis:
+### Page of influencer analysis:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/influ.png)
 
-#### Page of result Ads:
+### Page of result Ads:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-banner.png)
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-airpod.png)
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-ipad.png)
