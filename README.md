@@ -30,7 +30,8 @@ get into "website/s3" folder:
 
 `python -m SimpleHTTPServer`
 
-And then, the website is availble through: '0.0.0.0:5000'
+And then, the website is availble through:
+'0.0.0.0:5000'
 
 
 
