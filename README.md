@@ -2,8 +2,6 @@
 
 ## E6893-Big-Data-Project
 
-**Team ID: 201812-20**
-
 **Team Members:**
 
 |UNI     |       Name             |           Email        |
