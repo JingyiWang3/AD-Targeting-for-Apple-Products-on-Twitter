@@ -1,16 +1,13 @@
 # Twitter 广告定向投放项目
 
-**介绍** 
+## 简介
+推特广告是扩展业务覆盖面的好方法，能有效地将内容投放到目标市场，获取流量。本项目通过精心策划，如选择正确的关键词、人群、用户感兴趣的广告文案、以及有影响力的广告推广人，来达到以最低的成本使用推特广告，“击中”最有购买可能的潜在客户，了解用户的需求，为用户体验优化提供方向的目标。
 
-结合用户社交、兴趣，利用专业数据算法打造的 Airpods Twitter 广告营销推广策略
 
-**目标**
-
-1. 挖掘用户数据，建立用户标签，对其进行个性化推送，以更低的费用获得获取更大的营销效果。
-2. 了解用户想法及需求，为用户体验优化提供方向，达到获客、黏客的目的。
-
-**流程**
+## 流程
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram2.png)
+
+
 
 **代码**
 
@@ -32,7 +29,7 @@
 
 #### The website is hosted on Google Cloud and can be access through: [http://35.196.85.28:5000/](http://35.196.85.28:5000/)
 
-## Run Instruction:
+## 快速开始
 
 clone the git repository: 
 
