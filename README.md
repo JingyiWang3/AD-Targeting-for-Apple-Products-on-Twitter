@@ -68,7 +68,7 @@ And then, the website is availble through: '0.0.0.0:5000'
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-airpod.png)
 
 
-## 成员
+## 成员信息
 
 |     姓名           |          邮件        | 
 |  -------------------   |   ------------------| 
