@@ -1,5 +1,4 @@
-# AD-Targeting-for-Apple-Products-on-Twitter
-
+# Twitter 广告定向投放项目
 
 **介绍** 
 
@@ -16,9 +15,13 @@
 **代码**
 
 ```data_collection```：获取数据
+
 ```data_processing```：数据清洗
+
 ```data_processing/main.ipynb``` 
+
 ```output```：中间结果图
+
 ```website```：网站搭建代码
 
 
