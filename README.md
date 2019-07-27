@@ -7,7 +7,7 @@
 ## 流程
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram2.png)
 
-1. 通过 Twiiter API 抓取包含关键词 airpod 的数据，对数据进行简单的处理，存入MangoDB 中。
+1. 通过 Twiiter API 抓取包含关键词 airpod 的数据。数据大小为 1.4 GB,包含超过 240000 条推特数据。 对数据进行简单预处理，存入MangoDB 中。
 2. 数据分析流程
 
    * 使用用户个人描述及用户信息，建立用户画像（包含地域、活跃时间、客户端、用户职业、兴趣、受教育程度、是否结婚、有孩子等标签），定位对 airpod 感兴趣的受众。
