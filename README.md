@@ -11,23 +11,22 @@
 2. 数据分析流程
 
    * 使用用户个人描述及用户信息，建立用户画像（包含地域、活跃时间、客户端、用户职业、兴趣、受教育程度、是否结婚、有孩子等标签），定位对 airpod 感兴趣的受众。
-   * 使用 LDA 算法分析推文主题，可以把这些主题大概理解为这是用户对 Airpods 最关注的点，作为广告核心话题。同时通过分析这些包含了主观情感色彩的推文来了解用户对产品的看法，为用户体验优化提供方向。
-   * 通过构造社交网络，结合 PageRank 算法挖掘出有影响力的用户，作为广告推广人。
-3. 使用 Flask 搭建网站，实现可视化。
+   * 使用 LDA 算法分析推文主题作为广告核心话题，可以把这些主题理解为用户对 Airpods 最关注的点。同时通过分析这些包含了主观情感色彩的推文来了解用户对产品的看法，为用户体验优化提供方向。
+   * 通过构造社交网络，结合 PageRank 算法挖掘出有影响力的用户作为广告推广人。
+3. 使用 Flask框架搭建网站，实现可视化。
   
 
 ## 不足
 
-1. 清晰的效果统计工具，以及合理的结算方式。
-2. 无法真正花钱在 Twitter 上打广告。
+无法真正花钱在 Twitter 上打广告查看效果，缺乏清晰的效果统计工具，以及合理的广告结算方式。
 
 
 ## 文件夹介绍
-```data_collection```：获取数据代码
+```data_collection```：数据采集代码
 
-```data_processing```：数据清洗和数据分析代码，包含词云、LDA、情感分析、及PageRank 代码
+```data_processing```：数据清洗和数据分析代码，包含词云、LDA、情感分析、及PageRank的代码
 
-```data_processing/main.ipynb``` 
+```data_processing/main.ipynb``` 数据分析代码汇总
 
 ```output```：数据分析中间结果图
 
@@ -55,16 +54,16 @@ And then, the website is availble through: '0.0.0.0:5000'
 ## 网站内容
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/main.png)
 
-### Page of twitter and geometrical information:
+### 用户基本信息页面
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/geo.png)
 
-### Page of profile and sentimentation analysis:
+### 主题分析和情感分析页面
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/sen.png)
 
-### Page of influencer analysis:
+### 用户重要性分析页面
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/influ.png)
 
-### Page of result Ads:
+### 广告策略页面
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-banner.png)
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-airpod.png)
 
