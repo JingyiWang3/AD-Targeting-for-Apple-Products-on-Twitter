@@ -7,6 +7,15 @@
 ## 流程
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram2.png)
 
+1. 通过 Twiiter API 抓取包含关键词 airpod 的数据，对数据进行简单的处理，存入MangoDB 中。
+2. 数据分析流程
+  1. 使用用户个人描述及用户信息，建立用户画像（包含地点、活跃时间、客户端、用户职业、兴趣、是否结婚、有孩子等标签），定位对 airpod 感兴趣的受众。
+  2. 使用 LDA 分析推文，了解推文的主题。 同时通过分析这些包含了主观情感色彩的推文来了解用户对产品的看法。
+3. 使用 Flask 搭建网站，实现可视化。
+  
+
+
+
 
 
 **代码**
