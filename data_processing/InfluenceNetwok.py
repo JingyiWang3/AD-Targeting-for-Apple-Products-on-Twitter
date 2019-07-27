@@ -3,7 +3,7 @@
 
 # In[9]:
 
-
+# Load packages
 import pandas as pd
 import numpy as np
 import networkx as nx
@@ -13,6 +13,8 @@ import pymongo
 from pymongo import MongoClient
 
 
+
+# Build network
 def get_people(df):  # user_mentions screen_name 
     retweeted_index  = df.loc[df.retweeted_status.notnull(),:].index
     
@@ -61,7 +63,7 @@ def get_indeg(G,first,last):
     top_indegCent = sorted(indegCent.items(),  key=operator.itemgetter(1), reverse=True)[first:last]
     return indegCent,top_indegCent,pd.DataFrame(top_indegCent,columns = ['ScreenName',"In-degree"])
 
-
+# TOP 10 influencer
 def get_influencer(df):
     G,group_dict= get_people(df)
     indegCent,top6,top_indegCent = get_indeg(G,0,10)
@@ -69,7 +71,7 @@ def get_influencer(df):
     new = pd.merge(pr,top_indegCent,how='inner', on='ScreenName' )
     return new
 
-
+# plot graph
 def get_subgraph(indegCent):
     sub_node =  [i[0] for i in indegCent]
     print(len(sub_node))
@@ -79,7 +81,7 @@ def get_subgraph(indegCent):
     return (G.subgraph(sub_node ))
     
 
-
+# data visualization
 def get_d3_dict(subgraph,indegCent):
     mydict = {'nodes':[],'links':[]}
     for node in subgraph.nodes():
