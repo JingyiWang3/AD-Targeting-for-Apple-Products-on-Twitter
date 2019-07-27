@@ -3,7 +3,7 @@
 
 # In[ ]:
 
-
+# Load packages
 import re
 from bs4 import BeautifulSoup
 # from nltk.tokenize import WordPunctTokenizer
@@ -20,6 +20,7 @@ from wordcloud import ImageColorGenerator
 get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'retina'")
 
 
+# data cleaning
 def clean_text(text):
     lower= text.lower()
     pat = r'(at? @\w+)|(https?://[^ ]+)|(www.[^ ]+)'
@@ -29,16 +30,17 @@ def clean_text(text):
                     "wouldn't":"would not", "don't":"do not", "doesn't":"does not","didn't":"did not",
                     "can't":"can not","couldn't":"could not","shouldn't":"should not","mightn't":"might not",
                     "mustn't":"must not"}
-    neg_pattern = re.compile(r'\b(' + '|'.join(negations_dic.keys()) + r')\b')
+    neg_pattern = re.compile(r'\b(' + '|'.join(negations_dic.keys()) + r')\b') 
     neg_handled = neg_pattern.sub(lambda x: negations_dic[x.group()], stripped)
     tokenizer = RegexpTokenizer(r'\w+')
-    tokens = tokenizer.tokenize(neg_handled)
+    tokens = tokenizer.tokenize(neg_handled) #tokenization
     stemmer = PorterStemmer()
     stemmed =  [stemmer.stem(word) for word in tokens] # stemming
     stripped = [word for word in stemmed if word not in stopwords.words('english')]
     return(" ".join(stripped).strip())
 
 
+# add stop words
 stopwords_lst  = ['love','ig','sc','apple','like', 'snap', 'snapchat', 'make', 'insta', 'life', 'follow', 'tweet',
                  'go', 'want', 'live', 'take', 'one', 'know', 'thing', 'instagram']
 
