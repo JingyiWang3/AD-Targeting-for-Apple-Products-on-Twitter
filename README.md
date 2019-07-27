@@ -11,6 +11,10 @@
 2. 了解用户想法及需求，为用户体验优化提供方向，
 
 **流程**
+![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram2.png)
+
+**代码**
+The intermediate ouput of LDA, Sentiment Analysis and Influence Analysis is in ```data_processing/main.ipynb``` 
 
 **缺点**
 1. 无法真正花钱在 Twitter 上打广告。
@@ -18,8 +22,6 @@
 
 
 #### The website is hosted on Google Cloud and can be access through: [http://35.196.85.28:5000/](http://35.196.85.28:5000/)
-
-The intermediate ouput of LDA, Sentiment Analysis and Influence Analysis is in ```data_processing/main.ipynb``` 
 
 ## Run Instruction:
 
@@ -41,8 +43,7 @@ And then, the website is availble through: '0.0.0.0:5000'
 
 
 
-## The diagram of the project:
-![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram2.png)
+
 
 ### Main page of website:
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/main.png)
