@@ -3,18 +3,24 @@
 
 **介绍** 
 
-结合用户社交、兴趣，利用专业数据算法打造的 Airpods 社交营销推广策略
+结合用户社交、兴趣，利用专业数据算法打造的 Airpods Twitter 广告营销推广策略
 
 **目标**
 
 1. 挖掘用户数据，建立用户标签，对其进行个性化推送，以更低的费用获得获取更大的营销效果。
-2. 了解用户想法及需求，为用户体验优化提供方向，
+2. 了解用户想法及需求，为用户体验优化提供方向，达到获客、黏客的目的。
 
 **流程**
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/diagram2.png)
 
 **代码**
-The intermediate ouput of LDA, Sentiment Analysis and Influence Analysis is in ```data_processing/main.ipynb``` 
+
+```data_collection```：获取数据
+```data_processing```：数据清洗
+```data_processing/main.ipynb``` 
+```output```：中间结果图
+```website```：网站搭建代码
+
 
 **缺点**
 1. 无法真正花钱在 Twitter 上打广告。
@@ -38,9 +44,6 @@ get into "website/s3" folder:
 `python -m SimpleHTTPServer`
 
 And then, the website is availble through: '0.0.0.0:5000'
-
-
-
 
 
 
