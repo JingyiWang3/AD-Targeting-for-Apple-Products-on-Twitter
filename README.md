@@ -69,16 +69,17 @@ And then, the website is availble through: '0.0.0.0:5000'
 
 
 ## 如何在 Twitter 上发广告
-
 登录推特，点击个人资料照片，选择“Twitter Ads”（推特广告），打开新页面。在页面右上角有一个“Create Campaign”（创建广告活动），选择一个你想要尝试的付费广告类型。
 
-**1. 选择你用户群**
+**1. 选择用户群**
+
 ![user](./output/adstep1.png)
 
-**2. 选择他们的客户端**
+**2. 选择客户端**
+
 ![device](./output/adstep2.png)
 
-**3. 他们的兴趣**
+**3. 选择用户兴趣**
 ![interests](./output/adstep3.png)
 
 **4. 选择广告推广人**
