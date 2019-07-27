@@ -16,28 +16,24 @@
 3. 使用 Flask 搭建网站，实现可视化。
   
 
-
-
-
-## 文件夹介绍
-```data_collection```：获取数据
-
-```data_processing```：数据清洗
-
-```data_processing/main.ipynb``` 
-
-```output```：中间结果图
-
-```website```：网站搭建代码
-
-
 ## 不足
 
 1. 清晰的效果统计工具，以及合理的结算方式。
 2. 无法真正花钱在 Twitter 上打广告。
 
 
-#### The website is hosted on Google Cloud and can be access through: [http://35.196.85.28:5000/](http://35.196.85.28:5000/)
+## 文件夹介绍
+```data_collection```：获取数据代码
+
+```data_processing```：数据清洗和数据分析代码，包含词云、LDA、情感分析、及PageRank 代码
+
+```data_processing/main.ipynb``` 
+
+```output```：数据分析中间结果图
+
+```website```：网站搭建及可视化代码
+
+
 
 ## 快速开始
 
@@ -56,9 +52,7 @@ get into "website/s3" folder:
 And then, the website is availble through: '0.0.0.0:5000'
 
 
-
-
-### Main page of website:
+## 网站内容
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/main.png)
 
 ### Page of twitter and geometrical information:
@@ -75,10 +69,10 @@ And then, the website is availble through: '0.0.0.0:5000'
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-airpod.png)
 
 
-**Team Members:**
+## 成员
 
-|UNI     |       Name             |           Email        |
-| ------ |  -------------------   |   ---------------------|
-|jw3592  |   Jingyi Wang            | jw3592@columbia.edu |
-|fl2476  |  Fangbing Liu           | fl2476@columbia.edu    |
-|yh2866  |   Yuanqing Hong        |  yh2866@columbia.edu   |
+|     姓名           |          邮件        | 
+|  -------------------   |   ------------------| 
+| Jingyi Wang            | jw3592@columbia.edu |
+| Fangbing Liu           | fl2476@columbia.edu    |
+| Yuanqing Hong        |  yh2866@columbia.edu   |
