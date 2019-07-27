@@ -68,6 +68,13 @@ And then, the website is availble through: '0.0.0.0:5000'
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-airpod.png)
 
 
+## 如何在 Twitter 上发广告
+
+1. 选择你用户群
+2. 选择他们的客户端
+3. 他们的兴趣
+4. 选择广告推广人
+
 ## 成员信息
 
 |     姓名           |          邮件        | 
