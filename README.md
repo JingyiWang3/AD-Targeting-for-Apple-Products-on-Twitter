@@ -63,9 +63,12 @@ And then, the website is availble through: '0.0.0.0:5000'
 ### 用户重要性分析页面
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/influ.png)
 
-### 广告策略页面
+### 广告策略页面(成果)
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-banner.png)
 ![Image of Architecture](https://github.com/yh2866/AD-Targeting-for-Apple-Products-on-Twitter/blob/master/website/img/ad-airpod.png)
+
+<hr>
+
 
 
 ## 如何在 Twitter 上发广告
