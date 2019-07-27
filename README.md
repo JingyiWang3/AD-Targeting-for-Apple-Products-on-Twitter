@@ -26,7 +26,7 @@
 
 ```data_processing```：数据清洗和数据分析代码，包含词云、LDA、情感分析、及PageRank的代码
 
-```data_processing/main.ipynb``` 数据分析代码汇总
+```data_processing/main.ipynb```：数据分析代码汇总
 
 ```output```：数据分析中间结果图
 
